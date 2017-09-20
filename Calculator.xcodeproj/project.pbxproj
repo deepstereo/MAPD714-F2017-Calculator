@@ -12,6 +12,9 @@
 		13FF85501F72DB24002BCB0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF854E1F72DB24002BCB0A /* Main.storyboard */; };
 		13FF85521F72DB24002BCB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85511F72DB24002BCB0A /* Assets.xcassets */; };
 		13FF85551F72DB24002BCB0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85531F72DB24002BCB0A /* LaunchScreen.storyboard */; };
+		13FF855D1F72E03F002BCB0A /* B3-23_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13FF855C1F72E03F002BCB0A /* B3-23_b.jpg */; };
+		13FF855F1F72ECF8002BCB0A /* Elektronika@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FF855E1F72ECF8002BCB0A /* Elektronika@1x.png */; };
+		13FF85651F72FAD1002BCB0A /* Calculator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85601F72F6B0002BCB0A /* Calculator.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		13FF85511F72DB24002BCB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13FF85541F72DB24002BCB0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13FF85561F72DB24002BCB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13FF855C1F72E03F002BCB0A /* B3-23_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "B3-23_b.jpg"; sourceTree = "<group>"; };
+		13FF855E1F72ECF8002BCB0A /* Elektronika@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Elektronika@1x.png"; sourceTree = "<group>"; };
+		13FF85601F72F6B0002BCB0A /* Calculator.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calculator.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 				13FF854C1F72DB24002BCB0A /* ViewController.swift */,
 				13FF854E1F72DB24002BCB0A /* Main.storyboard */,
 				13FF85511F72DB24002BCB0A /* Assets.xcassets */,
+				13FF855C1F72E03F002BCB0A /* B3-23_b.jpg */,
+				13FF855E1F72ECF8002BCB0A /* Elektronika@1x.png */,
 				13FF85531F72DB24002BCB0A /* LaunchScreen.storyboard */,
 				13FF85561F72DB24002BCB0A /* Info.plist */,
+				13FF85601F72F6B0002BCB0A /* Calculator.ttf */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -124,8 +133,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FF85651F72FAD1002BCB0A /* Calculator.ttf in Resources */,
 				13FF85551F72DB24002BCB0A /* LaunchScreen.storyboard in Resources */,
 				13FF85521F72DB24002BCB0A /* Assets.xcassets in Resources */,
+				13FF855F1F72ECF8002BCB0A /* Elektronika@1x.png in Resources */,
+				13FF855D1F72E03F002BCB0A /* B3-23_b.jpg in Resources */,
 				13FF85501F72DB24002BCB0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
