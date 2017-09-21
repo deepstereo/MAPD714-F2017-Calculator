@@ -5,6 +5,7 @@
 //  Created by Sergey Kozak on 20/09/2017.
 //  Copyright © 2017 Centennial. All rights reserved.
 //
+//  Assignment 1 - Calculator version 0.1
 
 import UIKit
 
