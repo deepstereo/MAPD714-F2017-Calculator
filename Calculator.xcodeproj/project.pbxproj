@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1309524A1F74D1ED005F7605 /* Calculator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85601F72F6B0002BCB0A /* Calculator.ttf */; };
 		13FF854B1F72DB24002BCB0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF854A1F72DB24002BCB0A /* AppDelegate.swift */; };
 		13FF854D1F72DB24002BCB0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF854C1F72DB24002BCB0A /* ViewController.swift */; };
 		13FF85501F72DB24002BCB0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF854E1F72DB24002BCB0A /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		13FF85551F72DB24002BCB0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85531F72DB24002BCB0A /* LaunchScreen.storyboard */; };
 		13FF855D1F72E03F002BCB0A /* B3-23_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13FF855C1F72E03F002BCB0A /* B3-23_b.jpg */; };
 		13FF855F1F72ECF8002BCB0A /* Elektronika@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FF855E1F72ECF8002BCB0A /* Elektronika@1x.png */; };
-		13FF85651F72FAD1002BCB0A /* Calculator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13FF85601F72F6B0002BCB0A /* Calculator.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,7 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13FF85651F72FAD1002BCB0A /* Calculator.ttf in Resources */,
+				1309524A1F74D1ED005F7605 /* Calculator.ttf in Resources */,
 				13FF85551F72DB24002BCB0A /* LaunchScreen.storyboard in Resources */,
 				13FF85521F72DB24002BCB0A /* Assets.xcassets in Resources */,
 				13FF855F1F72ECF8002BCB0A /* Elektronika@1x.png in Resources */,
