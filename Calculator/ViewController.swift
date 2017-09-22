@@ -38,13 +38,13 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func decimalButton(_ sender: UIButton) {
-        if (Float(screenLabel.text!) != nil) {
-            screenLabel.text = screenLabel.text! + "."
-        } else {
-            screenLabel.text = screenLabel.text
-        }
-    }
+   @IBAction func decimalButton(_ sender: UIButton) {
+//        if (Float(screenLabel.text!) != nil) {
+//            screenLabel.text = screenLabel.text! + "."
+//        } else {
+//            screenLabel.text = screenLabel.text
+//        }
+   }
     
     @IBAction func clearButton(_ sender: UIButton) {
         screenLabel.text = String(0)
