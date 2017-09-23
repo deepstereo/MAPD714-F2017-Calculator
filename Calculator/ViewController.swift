@@ -28,7 +28,11 @@ class ViewController: UIViewController {
     
     
     // Actions
+    // Clear button
     
+    @IBAction func clearButton(_ sender: UIButton) {
+        screenLabel.text = String(0)
+    }
     
     // Numeric buttons
     
@@ -42,25 +46,20 @@ class ViewController: UIViewController {
     }
     
     // Decimal button
+    // If screen value can be converted into an integer than add a "."
     
    @IBAction func decimalButton(_ sender: UIButton) {
     if Int(screenLabel.text!) != nil {
         screenLabel.text = screenLabel.text! + "."
     } else {
-        print("Invalid number")
+        print("Decimal point already there")
     }
-    }
-    
-    // Clear button
-    
-    @IBAction func clearButton(_ sender: UIButton) {
-        screenLabel.text = String(0)
     }
     
     // Operations
     
-    
     @IBAction func operationButton(_ sender: UIButton) {
+
     }
     
     
