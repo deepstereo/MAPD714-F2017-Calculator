@@ -64,6 +64,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="equalsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ClK-rt-NeY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWp-RU-HIa">
                                 <rect key="frame" x="157" y="598" width="63" height="52"/>
@@ -144,6 +147,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYj-Gw-bXk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-8C-6nw">
                                 <rect key="frame" x="12" y="459" width="63" height="58"/>
@@ -208,6 +214,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvv-tX-tgP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzX-or-hAh">
                                 <rect key="frame" x="12" y="390" width="63" height="58"/>
@@ -279,6 +288,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71S-yV-pLk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-ql-C5O">
                                 <rect key="frame" x="12" y="326" width="129" height="52"/>

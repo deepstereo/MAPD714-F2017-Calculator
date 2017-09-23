@@ -17,21 +17,23 @@ class ViewController: UIViewController {
     }
 
    
+    var screenValue = "0"
+    var operand1 = 0.0
+    var operand2 = 0.0
+    var operation = ""
+    
+    
     // Outlets
     
     @IBOutlet weak var screenLabel: UILabel!
     
-    
-    
-    
-    
-    
-    
+ 
     // Actions
     // Clear button
     
     @IBAction func clearButton(_ sender: UIButton) {
-        screenLabel.text = String(0)
+        screenLabel.text = "0"
+        operand1 = 0.0
     }
     
     // Numeric buttons
@@ -40,6 +42,10 @@ class ViewController: UIViewController {
         
         if screenLabel.text! == "0" {
             screenLabel.text = sender.titleLabel?.text!
+        } else if screenValue != "0" {
+            screenLabel.text = sender.titleLabel?.text!
+            screenValue = "0"
+            print("Operand 1: \(operand1)")
         } else {
             screenLabel.text = screenLabel.text! + (sender.titleLabel?.text)!
         }
@@ -59,9 +65,29 @@ class ViewController: UIViewController {
     // Operations
     
     @IBAction func operationButton(_ sender: UIButton) {
-
+        operand1 = Double(screenLabel.text!)!
+        screenValue = String(operand1)
+        operation = (sender.titleLabel?.text!)!
     }
     
+    
+    
+    @IBAction func equalsButton(_ sender: UIButton) {
+        operand2 = Double(screenLabel.text!)!
+        print("Operand 2: \(operand2)")
+        switch operation != "" {
+        case operation == "+" :
+            screenLabel.text = String(operand1 + operand2)
+        case operation == "-" :
+            screenLabel.text = String(operand1 - operand2)
+        case operation == "*" :
+            screenLabel.text = String(operand1 * operand2)
+        case operation == "/" :
+            screenLabel.text = String(operand1 / operand2)
+        default:
+        print("result shown")
+        }
+    }
     
     
     
