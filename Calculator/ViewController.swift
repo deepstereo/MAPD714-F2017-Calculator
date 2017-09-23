@@ -29,26 +29,36 @@ class ViewController: UIViewController {
     
     // Actions
     
+    
+    // Numeric buttons
+    
     @IBAction func numberButton(_ sender: UIButton) {
         
-        if Int(screenLabel.text!)! == 0 {
+        if screenLabel.text! == "0" {
             screenLabel.text = sender.titleLabel?.text!
         } else {
             screenLabel.text = screenLabel.text! + (sender.titleLabel?.text)!
         }
     }
     
+    // Decimal button
+    
    @IBAction func decimalButton(_ sender: UIButton) {
-//        if (Float(screenLabel.text!) != nil) {
-//            screenLabel.text = screenLabel.text! + "."
-//        } else {
-//            screenLabel.text = screenLabel.text
-//        }
-   }
+    if Int(screenLabel.text!) != nil {
+        screenLabel.text = screenLabel.text! + "."
+    } else {
+        print("Invalid number")
+    }
+    }
+    
+    // Clear button
     
     @IBAction func clearButton(_ sender: UIButton) {
         screenLabel.text = String(0)
     }
+    
+    // Operations
+    
     
     @IBAction func operationButton(_ sender: UIButton) {
     }
