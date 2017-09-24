@@ -70,12 +70,11 @@ class ViewController: UIViewController {
     // Numeric buttons
     
     @IBAction func numberButton(_ sender: UIButton) {
-        if Int(screen.text!) == 0 && sender.titleLabel?.text == "0" {
-            screen.text = "0"
+        if Int(screen.text!) == 0 {
+            screen.text = sender.titleLabel?.text
         } else {
             screen.text = screen.text! + (sender.titleLabel?.text)!
         }
-     
     }
     
     
