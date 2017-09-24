@@ -47,9 +47,9 @@ class ViewController: UIViewController {
     }
     
     func clear () -> String {
-        number1 = 0
-        number2 = 0
-        screenValue = 0
+        number1 = 0.0
+        number2 = 0.0
+        screenValue = 0.0
         screen.text = "0"
         operation = ""
         return screen.text!
@@ -101,16 +101,16 @@ class ViewController: UIViewController {
         if sender.tag == 1 {
             if operation == "" {
                 operation = "+"
-                number1 = screenValue
-                screenValue = 0
-                print(operation, number1, screenValue)
+                number1 = Double(screen.text!)!
+                screenValue = 0.0
+                print(number1)
             } else {
                 if screenValue == 0.0 {
-                    print("no number to save")
+                    print("no new number to save")
                 } else {
-                    number1 = number1 + screenValue
+                    number1 = number1 + Double(screen.text!)!
                     screen.text = String(number1)
-                    screenValue = 0
+                    screenValue = 0.0
                 }
             }
         } else if sender.tag == 2 {
