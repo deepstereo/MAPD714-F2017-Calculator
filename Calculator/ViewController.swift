@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var number1 = 0.0
     var number2 = 0.0
     var operation = ""
+    var result = 0.0
     
     // Functions for mathematic operations
     
@@ -70,11 +71,14 @@ class ViewController: UIViewController {
     // Numeric buttons
     
     @IBAction func numberButton(_ sender: UIButton) {
-        if screen.text == "0" {
+        
+        if screenValue == 0.0 {
             screen.text = sender.titleLabel?.text
+            screenValue = Double(screen.text!)!
         } else {
+            screenValue = Double(screen.text!)!
             screen.text = screen.text! + (sender.titleLabel?.text)!
-            }
+        }
     }
     
     
@@ -95,17 +99,54 @@ class ViewController: UIViewController {
     @IBAction func operationButton(_ sender: UIButton) {
         if sender.tag == 1 {
             operation = "+"
+            if number1 == 0 && result == 0 {
+                number1 = Double(screen.text!)!
+                screenValue = 0
+            } else {
+                result = number1 + Double(screen.text!)!
+                screen.text = String(result)
+                number1 = 0
+                print("number 1 now " + String(number1))
+            }
         } else if sender.tag == 2 {
             operation = "-"
+            if number1 == 0 {
+                number1 = Double(screen.text!)!
+                screenValue = 0
+                print("screen value is " + String(screenValue))
+            } else {
+                number1 = number1 - Double(screen.text!)!
+                screen.text = String(number1)
+                screenValue = 0
+                print("number 1 now " + String(number1))
+            }
         } else if sender.tag == 3 {
             operation = "*"
+            if number1 == 0 {
+                number1 = Double(screen.text!)!
+                screenValue = 0
+                print("screen value is " + String(screenValue))
+            } else {
+                number1 = number1 * Double(screen.text!)!
+                screen.text = String(number1)
+                screenValue = 0
+                print("number 1 now " + String(number1))
+            }
         }else if sender.tag == 4 {
             operation = "/"
+            if number1 == 0 {
+                number1 = Double(screen.text!)!
+                screenValue = 0
+                print("screen value is " + String(screenValue))
+            } else {
+                number1 = number1 / Double(screen.text!)!
+                screen.text = String(number1)
+                screenValue = 0
+                print("number 1 now " + String(number1))
+            }
         }
         
-        number1 = Double(screen.text!)!
-        screenValue = 0
-        print("screen value is " + String(screenValue))
+        
     }
     
     
