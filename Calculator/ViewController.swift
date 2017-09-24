@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
    
-    var screenValue = "0"
+    var screenValue = 0.0
     var operand1 = 0.0
     var operand2 = 0.0
     var operation = ""
@@ -25,29 +25,31 @@ class ViewController: UIViewController {
     
     // Outlets
     
-    @IBOutlet weak var screenLabel: UILabel!
+    @IBOutlet weak var screen: UILabel!
     
  
     // Actions
     // Clear button
     
     @IBAction func clearButton(_ sender: UIButton) {
-        screenLabel.text = "0"
-        operand1 = 0.0
+        screenValue = 0.0
+        screen.text = String(Int(screenValue))
     }
     
     // Numeric buttons
     
     @IBAction func numberButton(_ sender: UIButton) {
-        
-        if screenLabel.text! == "0" {
-            screenLabel.text = sender.titleLabel?.text!
-        } else if screenValue != "0" {
-            screenLabel.text = sender.titleLabel?.text!
-            screenValue = "0"
-            print("Operand 1: \(operand1)")
+     
+        if screenValue == 0.0 {
+            screen.text = sender.titleLabel?.text
+            screenValue = Double(screen.text!)!
+            operand1 = Double(screen.text!)!
+            print("Operand 1 is \(operand1)")
         } else {
-            screenLabel.text = screenLabel.text! + (sender.titleLabel?.text)!
+            screenValue = Double(screen.text!)!
+            screen.text = screen.text! + (sender.titleLabel?.text)!
+            operand1 = Double(screen.text!)!
+            print("Operand 1 is \(operand1)")
         }
     }
     
@@ -55,8 +57,8 @@ class ViewController: UIViewController {
     // If screen value can be converted into an integer than add a "."
     
    @IBAction func decimalButton(_ sender: UIButton) {
-    if Int(screenLabel.text!) != nil {
-        screenLabel.text = screenLabel.text! + "."
+    if Int(screen.text!) != nil {
+        screen.text = screen.text! + "."
     } else {
         print("Decimal point already there")
     }
@@ -65,28 +67,34 @@ class ViewController: UIViewController {
     // Operations
     
     @IBAction func operationButton(_ sender: UIButton) {
-        operand1 = Double(screenLabel.text!)!
-        screenValue = String(operand1)
         operation = (sender.titleLabel?.text!)!
+        operand2 = Double(screen.text!)!
+        screenValue = 0.0
+        print("operaton \(operation), screenvalue \(screenValue), operand 1 \(operand1), operand 2 \(operand2)")
+       
     }
     
     
     
     @IBAction func equalsButton(_ sender: UIButton) {
-        operand2 = Double(screenLabel.text!)!
-        print("Operand 2: \(operand2)")
+        
         switch operation != "" {
-        case operation == "+" :
-            screenLabel.text = String(operand1 + operand2)
-        case operation == "-" :
-            screenLabel.text = String(operand1 - operand2)
-        case operation == "*" :
-            screenLabel.text = String(operand1 * operand2)
-        case operation == "/" :
-            screenLabel.text = String(operand1 / operand2)
+        case operation == "+":
+            screen.text = String(operand1 + operand2)
+            screenValue = 0.0
+        case operation == "-":
+            screen.text = String(operand2 - operand1)
+            screenValue = 0.0
+        case operation == "*":
+            screen.text = String(operand1 * operand2)
+            screenValue = 0.0
+        case operation == "/":
+            screen.text = String(operand2 / operand1)
+            screenValue = 0.0
         default:
-        print("result shown")
+            print(screenValue)
         }
+        
     }
     
     

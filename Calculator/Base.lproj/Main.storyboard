@@ -481,7 +481,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="screenLabel" destination="yzP-xn-Y13" id="bkl-Y0-GbU"/>
+                        <outlet property="screen" destination="yzP-xn-Y13" id="SCE-rO-onS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
