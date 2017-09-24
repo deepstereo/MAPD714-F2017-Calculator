@@ -70,11 +70,11 @@ class ViewController: UIViewController {
     // Numeric buttons
     
     @IBAction func numberButton(_ sender: UIButton) {
-        if Int(screen.text!) == 0 {
+        if screen.text == "0" {
             screen.text = sender.titleLabel?.text
         } else {
             screen.text = screen.text! + (sender.titleLabel?.text)!
-        }
+            }
     }
     
     
@@ -104,7 +104,8 @@ class ViewController: UIViewController {
         }
         
         number1 = Double(screen.text!)!
-        
+        screenValue = 0
+        print("screen value is " + String(screenValue))
     }
     
     
