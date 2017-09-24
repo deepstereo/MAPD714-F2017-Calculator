@@ -63,24 +63,19 @@ class ViewController: UIViewController {
     // Clear button
     
     @IBAction func clearButton(_ sender: UIButton) {
-        screenValue = 0.0
-        number1 = 0.0
-        number2 = 0.0
-        screen.text = "0"
+        screen.text = clear()
     }
     
     
     // Numeric buttons
     
     @IBAction func numberButton(_ sender: UIButton) {
-     
-        if screenValue == 0.0 {
-            screen.text = sender.titleLabel?.text
-            screenValue = Double(screen.text!)!
+        if screen.text == "0" && sender.titleLabel?.text == "0" {
+            screen.text = "0"
         } else {
-            screenValue = Double(screen.text!)!
-            screen.text = screen.text! + (sender.titleLabel?.text)!
+            screen.text = " " + (sender.titleLabel?.text)!
         }
+     
     }
     
     
@@ -96,74 +91,32 @@ class ViewController: UIViewController {
     }
    
     
-    // Operations - currently works like Equals!
+    // Operations
     
     @IBAction func operationButton(_ sender: UIButton) {
-        
-        if number1 == 0 {
-            operation = (sender.titleLabel?.text)!
-            number1 = Double(screen.text!)!
-            screenValue = 0
-        } else {
-            if number2 == 0 {
-                number2 = number1
-                number1 = Double(screen.text!)!
-            } else {
-                print("already have both numbers")
-            }
+        if sender.tag == 1 {
+            operation = "+"
+        } else if sender.tag == 2 {
+            operation = "-"
+        } else if sender.tag == 3 {
+            operation = "*"
+        }else if sender.tag == 4 {
+            operation = "/"
         }
-        screen.text = addition(a: number1, b: number2)
-        screenValue = 0
-        number2 = 0
+        
+        number1 = Double(screen.text!)!
+        
     }
     
     
     
     
     @IBAction func equalsButton(_ sender: UIButton) {
-        
-        if number2 == 0.0 {
-            number2 = Double(screen.text!)!
-        
-        switch operation != "" {
-        case operation == "+":
-            screen.text = addition(a: number1, b: number2)
-            screenValue = 0.0
-        case operation == "-":
-            screen.text = subtraction(a: number1, b: number2)
-            screenValue = 0.0
-        case operation == "*":
-            screen.text = multiplication(a: number1, b: number2)
-            screenValue = 0.0
-        case operation == "/":
-            screen.text = division(a: number1, b: number2)
-            screenValue = 0.0
-        default:
-            print(screenValue)
-        }
-        } else {
-            switch operation != "" {
-            case operation == "+":
-                screen.text = addition(a: number1, b: number2)
-                screenValue = 0.0
-            case operation == "-":
-                screen.text = subtraction(a: number1, b: number2)
-                screenValue = 0.0
-            case operation == "*":
-                screen.text = multiplication(a: number1, b: number2)
-                screenValue = 0.0
-            case operation == "/":
-                screen.text = division(a: number1, b: number2)
-                screenValue = 0.0
-            default:
-                print(screenValue)
-        }
-        }
+    
     }
     
     
     
-
 
 }
 
