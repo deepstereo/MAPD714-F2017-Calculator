@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         number2 = 0
         screenValue = 0
         screen.text = "0"
+        operation = ""
         return screen.text!
     }
     
@@ -98,15 +99,19 @@ class ViewController: UIViewController {
     
     @IBAction func operationButton(_ sender: UIButton) {
         if sender.tag == 1 {
-            operation = "+"
-            if number1 == 0 && result == 0 {
-                number1 = Double(screen.text!)!
+            if operation == "" {
+                operation = "+"
+                number1 = screenValue
                 screenValue = 0
+                print(operation, number1, screenValue)
             } else {
-                result = number1 + Double(screen.text!)!
-                screen.text = String(result)
-                number1 = 0
-                print("number 1 now " + String(number1))
+                if screenValue == 0.0 {
+                    print("no number to save")
+                } else {
+                    number1 = number1 + screenValue
+                    screen.text = String(number1)
+                    screenValue = 0
+                }
             }
         } else if sender.tag == 2 {
             operation = "-"
