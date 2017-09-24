@@ -99,7 +99,7 @@ class ViewController: UIViewController {
     
     @IBAction func operationButton(_ sender: UIButton) {
         if sender.tag == 1 {
-            if operation == "" {
+            if operation != "+" {
                 operation = "+"
                 number1 = Double(screen.text!)!
                 screenValue = 0.0
@@ -113,46 +113,62 @@ class ViewController: UIViewController {
                     screenValue = 0.0
                 }
             }
-        } else if sender.tag == 2 {
-            operation = "-"
-            if number1 == 0 {
+        }
+        else if sender.tag == 2 {
+            if operation != "-" {
+                operation = "-"
                 number1 = Double(screen.text!)!
-                screenValue = 0
-                print("screen value is " + String(screenValue))
+                screenValue = 0.0
+                print(number1)
             } else {
-                number1 = number1 - Double(screen.text!)!
-                screen.text = String(number1)
-                screenValue = 0
-                print("number 1 now " + String(number1))
+                if screenValue == 0.0 {
+                    print("no new number to save")
+                } else {
+                    number1 = number1 - Double(screen.text!)!
+                    screen.text = String(number1)
+                    screenValue = 0.0
+                }
             }
-        } else if sender.tag == 3 {
-            operation = "*"
-            if number1 == 0 {
+            
+        }
+        else if sender.tag == 3 {
+            if operation != "*" {
+                operation = "*"
                 number1 = Double(screen.text!)!
-                screenValue = 0
-                print("screen value is " + String(screenValue))
+                screenValue = 0.0
+                print(number1)
             } else {
-                number1 = number1 * Double(screen.text!)!
-                screen.text = String(number1)
-                screenValue = 0
-                print("number 1 now " + String(number1))
+                if screenValue == 0.0 {
+                    print("no new number to save")
+                } else {
+                    number1 = number1 * Double(screen.text!)!
+                    screen.text = String(number1)
+                    screenValue = 0.0
+                }
             }
-        }else if sender.tag == 4 {
-            operation = "/"
-            if number1 == 0 {
+            
+        }
+        else if sender.tag == 4 {
+            if operation != "/" {
+                operation = "/"
                 number1 = Double(screen.text!)!
-                screenValue = 0
-                print("screen value is " + String(screenValue))
+                screenValue = 0.0
+                print(number1)
             } else {
-                number1 = number1 / Double(screen.text!)!
-                screen.text = String(number1)
-                screenValue = 0
-                print("number 1 now " + String(number1))
+                if screenValue == 0.0 {
+                    print("no new number to save")
+                } else {
+                    number1 = number1 / Double(screen.text!)!
+                    screen.text = String(number1)
+                    screenValue = 0.0
+                }
             }
+            
         }
         
-        
-    }
+        } // end op button
+    
+    
     
     
     
