@@ -156,7 +156,7 @@ class ViewController: UIViewController {
                 print(number1)
             } else {
                 if screenValue == 0.0 {
-                    print("no new number to save")
+                   print("no new number to save")
                 } else {
                     number1 = number1 / Double(screen.text!)!
                     screen.text = String(number1)
@@ -174,6 +174,50 @@ class ViewController: UIViewController {
     
     
     @IBAction func equalsButton(_ sender: UIButton) {
+        if operation == "+" {
+            if number2 == 0.0 {
+            number2 = Double(screen.text!)!
+            screen.text = String(number1 + number2)
+            number1 = Double(screen.text!)!
+            print(number1, number2)
+            } else {
+                number1 = Double(screen.text!)!
+                screen.text = String(number1 + number2)
+            }
+        } else if operation == "-" {
+            if number2 == 0.0 {
+                number2 = Double(screen.text!)!
+                screen.text = String(number1 - number2)
+                number1 = Double(screen.text!)!
+                print(number1, number2)
+            } else {
+                number1 = Double(screen.text!)!
+                screen.text = String(number1 - number2)
+            }
+            
+        } else if operation == "*" {
+            if number2 == 0.0 {
+                number2 = Double(screen.text!)!
+                screen.text = String(number1 * number2)
+                number1 = Double(screen.text!)!
+                print(number1, number2)
+            } else {
+                number1 = Double(screen.text!)!
+                screen.text = String(number1 * number2)
+            }
+            
+        } else if operation == "/" {
+            if number2 == 0.0 {
+                // number2 = Double(screen.text!)!
+                screen.text = "Error"
+                // number1 = Double(screen.text!)!
+                print(number1, number2)
+            } else {
+                number1 = Double(screen.text!)!
+                screen.text = String(number1 / number2)
+            }
+            
+        }
     
     }
     
