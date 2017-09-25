@@ -208,9 +208,18 @@ class ViewController: UIViewController {
             
         } else if operation == "/" {
             if number2 == 0.0 {
-                // number2 = Double(screen.text!)!
-                screen.text = "Error"
-                // number1 = Double(screen.text!)!
+                number2 = Double(screen.text!)!
+                if number2 != 0.0 {
+                    screen.text = String(number1 / number2)
+                    number1 = Double(screen.text!)!
+                } else {
+                    screen.text = "Error"
+                    screenValue = 0
+                    number1 = 0
+                    number2 = 0
+                    operation = ""
+                }
+                
                 print(number1, number2)
             } else {
                 number1 = Double(screen.text!)!
