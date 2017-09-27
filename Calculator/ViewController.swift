@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by Sergey Kozak on 20/09/2017.
-//  Copyright © 2017 Centennial. All rights reserved.
+//  Created by Sergii Kozak on 20/09/2017.
+//  Copyright © 2017 Centennial College. All rights reserved.
 //
 //  Assignment 1 - Calculator version 0.1
 
@@ -22,29 +22,6 @@ class ViewController: UIViewController {
     var number1 = 0.0
     var number2 = 0.0
     var operation = ""
-    var result = 0.0
-    
-    // Functions for mathematic operations
-    
-    func addition (a: Double, b: Double) -> String {
-        return String(a+b)
-    }
-    
-    func subtraction (a: Double, b: Double) -> String {
-       return String(a-b)
-    }
-    
-    func multiplication(a: Double, b: Double) -> String {
-        return String(a*b)
-    }
-    
-    func division (a: Double, b: Double) -> String {
-        if b != 0 {
-            return String(a/b)
-        } else {
-            return "Error!"
-        }
-    }
     
     func clear () -> String {
         number1 = 0.0
@@ -95,13 +72,18 @@ class ViewController: UIViewController {
     }
    
     
-    // Operations
+    // Operations buttons
     
     @IBAction func operationButton(_ sender: UIButton) {
         if sender.tag == 1 {
             if operation != "+" {
                 operation = "+"
-                number1 = Double(screen.text!)!
+                if Double(screen.text!) != nil {
+                    number1 = Double(screen.text!)!
+                } else {
+                    screen.text = "0"
+                    number1 = Double(screen.text!)!
+                }
                 screenValue = 0.0
                 print(number1)
             } else {
@@ -117,7 +99,12 @@ class ViewController: UIViewController {
         else if sender.tag == 2 {
             if operation != "-" {
                 operation = "-"
-                number1 = Double(screen.text!)!
+                if Double(screen.text!) != nil {
+                    number1 = Double(screen.text!)!
+                } else {
+                    screen.text = "0"
+                    number1 = Double(screen.text!)!
+                }
                 screenValue = 0.0
                 print(number1)
             } else {
@@ -134,7 +121,12 @@ class ViewController: UIViewController {
         else if sender.tag == 3 {
             if operation != "*" {
                 operation = "*"
-                number1 = Double(screen.text!)!
+                if Double(screen.text!) != nil {
+                    number1 = Double(screen.text!)!
+                } else {
+                    screen.text = "0"
+                    number1 = Double(screen.text!)!
+                }
                 screenValue = 0.0
                 print(number1)
             } else {
@@ -151,9 +143,13 @@ class ViewController: UIViewController {
         else if sender.tag == 4 {
             if operation != "/" {
                 operation = "/"
-                number1 = Double(screen.text!)!
+                if Double(screen.text!) != nil {
+                    number1 = Double(screen.text!)!
+                } else {
+                    screen.text = "0"
+                    number1 = Double(screen.text!)!
+                }
                 screenValue = 0.0
-                print(number1)
             } else {
                 if screenValue == 0.0 {
                    print("no new number to save")
@@ -170,16 +166,12 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    
     @IBAction func equalsButton(_ sender: UIButton) {
         if operation == "+" {
             if number2 == 0.0 {
             number2 = Double(screen.text!)!
             screen.text = String(number1 + number2)
             number1 = Double(screen.text!)!
-            print(number1, number2)
             } else {
                 number1 = Double(screen.text!)!
                 screen.text = String(number1 + number2)
@@ -189,7 +181,6 @@ class ViewController: UIViewController {
                 number2 = Double(screen.text!)!
                 screen.text = String(number1 - number2)
                 number1 = Double(screen.text!)!
-                print(number1, number2)
             } else {
                 number1 = Double(screen.text!)!
                 screen.text = String(number1 - number2)
@@ -200,7 +191,6 @@ class ViewController: UIViewController {
                 number2 = Double(screen.text!)!
                 screen.text = String(number1 * number2)
                 number1 = Double(screen.text!)!
-                print(number1, number2)
             } else {
                 number1 = Double(screen.text!)!
                 screen.text = String(number1 * number2)
@@ -214,13 +204,11 @@ class ViewController: UIViewController {
                     number1 = Double(screen.text!)!
                 } else {
                     screen.text = "Error"
-                    screenValue = 0
-                    number1 = 0
-                    number2 = 0
+                    screenValue = 0.0
+                    number1 = 0.0
+                    number2 = 0.0
                     operation = ""
                 }
-                
-                print(number1, number2)
             } else {
                 number1 = Double(screen.text!)!
                 screen.text = String(number1 / number2)
