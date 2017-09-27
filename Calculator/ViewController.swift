@@ -2,10 +2,14 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by Sergii Kozak on 20/09/2017.
+//  Created by Sergii Kozak on 20/09/2017, last modified on 26/09/2017
+//  Course MAPD 714 - iOS Development
+//  Student ID 303979113
+//
+//
 //  Copyright © 2017 Centennial College. All rights reserved.
 //
-//  Assignment 1 - Calculator version 0.1
+//  Assignment 1 - Calculator version 0.2
 
 import UIKit
 
@@ -78,7 +82,7 @@ class ViewController: UIViewController {
         if sender.tag == 1 {
             if operation != "+" {
                 operation = "+"
-                if Double(screen.text!) != nil {
+                if Double(screen.text!) != nil {        // in case of an Error message
                     number1 = Double(screen.text!)!
                 } else {
                     screen.text = "0"
@@ -164,7 +168,7 @@ class ViewController: UIViewController {
         
         } // end op button
     
-    
+    // Equals button. In case of division by zero, error message is displayed
     
     @IBAction func equalsButton(_ sender: UIButton) {
         if operation == "+" {
